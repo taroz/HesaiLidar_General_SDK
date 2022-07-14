@@ -36,11 +36,11 @@ target_link_libraries(${PROJECT_NAME}
 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_CURRENT_SOURCE_DIR})
     find_package(PCL REQUIRED)
-    add_executable(PandarGeneralTest
-        test/test.cc
+    add_executable(get_internal_calibration
+        test/get_internal_calibration.cc
     )
 
-    target_link_libraries(PandarGeneralTest
+    target_link_libraries(get_internal_calibration
         ${PROJECT_NAME}
         ${Boost_LIBRARIES}
         ${PCL_IO_LIBRARIES}
